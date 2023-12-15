@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container"> 
+        <img src="name.png" class="logo">
+        <div class="content">
+            <p>Welcome</p>
+            <h1>Adnane <span>Falh</span></h1>
+            <div class="luanch-time">
+                <div>
+                    <p id="days">00</p>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <span>Seconds</span>
+                </div>
+            </div>
+                <input type="button" onclick="location.href='https://www.mediamarkt.es/es/product/_apple-macbook-air-2022-136-retina-chip-m2-de-apple-gpu-8-nucleos-8-gb-256-gb-ssd-macos-teclado-magic-keyboard-touch-id-gris-espacial-1534476.html';" value="Click me" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+                <input type="button" onclick="location.href='https://www.mediamarkt.es/es/product/_patinete-electrico-xiaomi-electric-scooter-4-ultra-vel-25-kmh-70-km-autonomia-carga-rapida-12000mah-negro-1550536.html';" value="Click me" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+                <input type="button" onclick="location.href='https://www.mediamarkt.es/es/product/_apple-iphone-15-pro-titanio-natural-128-gb-5g-61-pantalla-super-retina-xdr-chip-a16-bionic-ios-1561352.html';" value="Click me" />
+            </div>
+
+    </div>
+    <script>
+      
+      var countdown= new Date("December 16 2023 00:00:00 GMT").getTime();
+        var x = setInterval(function() {
+            var now = new   Date().getTime();
+            var distance = countdown - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours
+            document.getElementById("minutes").innerHTML = minutes
+            document.getElementById("seconds").innerHTML = seconds
+
+
+
+        } ,1000);
+    </script>
+</body>
+</html>
